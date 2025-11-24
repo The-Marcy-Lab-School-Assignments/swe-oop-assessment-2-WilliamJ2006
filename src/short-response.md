@@ -32,6 +32,7 @@ class School {
     this.location = location;
     this.#population = population;
   }
+
   checkFull() {
     if (this.#population === this.#capacity) {
       return true;
@@ -39,6 +40,7 @@ class School {
       return false;
     }
   }
+  
   addStudent(student) {
     if (this.#population >= this.#capacity) {
       return `Max capacity.`;
@@ -102,6 +104,7 @@ class Animal {
     this.name = name;
     this.age = age;
   }
+
   speak() {
     return `${this.name} made a noise!`;
   }
@@ -112,6 +115,7 @@ class Dog extends Animal {
     super(name, age);
     this.breed = breed;
   }
+
   speak() {
     return `${this.name} barked!`;
   }
