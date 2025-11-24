@@ -22,9 +22,6 @@ class Pokemon {
   levelUp() {
     this.#level++;
     this.#health += 10;
-    if (this.#health >= 100) {
-      this.#health = 100;
-    }
     console.log(`${this.name} leveled up to level ${this.#level}!`);
   }
 
@@ -36,7 +33,7 @@ class Pokemon {
   }
 
   attack(targetPokemon) {
-    targetPokemon.#health -= 10 * targetPokemon.#level;
+    targetPokemon.#health -= 10 * this.#level;
     console.log(`${this.name} attacked ${targetPokemon.name}!`);
   }
 
